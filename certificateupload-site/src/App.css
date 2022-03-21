@@ -1,0 +1,25 @@
+html,
+body {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+body,
+body * {
+  margin: 0;
+  box-sizing: border-box;
+  word-break: break-word;
+  font-family: 'Noto Sans JP', 'Noto Sans CJK JP';
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 1024px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}

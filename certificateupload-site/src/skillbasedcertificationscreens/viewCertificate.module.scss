@@ -1,0 +1,76 @@
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+.maincontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.heading{
+  font-style: normal;
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin: 80px 0px 8px;
+  height: 30px;
+}
+.noteLabel{
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom:32px;
+}
+.detailBox{
+  display: flex;
+  width: 800px;
+  border: 1px solid rgba(23,21,21,.02);
+  background: rgba(23,21,21,.02);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding:24px;
+}
+.nameDiv{
+  display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+align-items: center;
+}
+.name{
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+}
+.issuer{
+  font-size :20px;
+  font-weight: 400;
+  color: gray;
+  margin-left: 24px;
+}
+.number
+{
+  border: 1px solid blue;
+  background-color: blue;
+  color: white;
+  border-radius: 24px;
+  display: flex;
+  font-size: 18px;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  margin-right: 8px;
+  justify-content: center;
+}
+.link{
+  font-size: 12px;
+  font-weight: 400;
+  margin: 10px 0px 0px 56px;
+  color: blue;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  justify-content: flex-start;
+}

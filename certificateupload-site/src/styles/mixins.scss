@@ -1,0 +1,57 @@
+$breakpointsDown: (
+  'sm': (
+    max-width: $sm,
+  ),
+  'md': (
+    max-width: $md,
+  ),
+  'lg': (
+    max-width: $lg,
+  ),
+  'xl': (
+    max-width: $xl,
+  ),
+  'xxl': (
+    max-width: $xxl,
+  ),
+);
+$breakpointsUp: (
+  'sm': (
+    min-width: $sm + 1px,
+  ),
+  'md': (
+    min-width: $md + 1px,
+  ),
+  'lg': (
+    min-width: $lg + 1px,
+  ),
+  'xl': (
+    min-width: $xl + 1px,
+  ),
+  'xxl': (
+    min-width: $xxl + 1px,
+  ),
+);
+@mixin breakpoint-down($breakpoint) {
+  $raw-query: map-get($breakpointsDown, $breakpoint);
+  @if $raw-query {
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '+'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+@mixin breakpoint-up($breakpoint) {
+  $raw-query: map-get($breakpointsUp, $breakpoint);
+  @if $raw-query {
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '+'Please make sure it is defined in `$breakpoints` map.';
+  }
+}

@@ -1,0 +1,106 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.box{
+    border: 1px solid rgba(23, 23, 21, 0.4);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding:24px 32px 24px;
+    align-items: center;
+    justify-content: center;
+  }
+  .certiRowDiv
+  {
+    display: flex;
+  
+  }
+  .uploadDiv{
+  
+    border: 1px solid rgba(23, 23, 21, 0.4);
+      display: flex;
+      border-radius: 25px;
+      width: 100%;
+      margin-top: 32px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .uploadText{
+      font-style: normal;
+      font-size: 16px;
+      font-weight: 400;
+      color: #000;
+      margin:16px
+  
+    }
+    .buttonDiv{
+  
+      border: none;
+      margin: 12px;
+      width: 150px;
+      cursor: pointer;
+      height: 36px;
+      display: flex;
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      border-radius: 15px;
+      background-color: #a582ee;
+      align-items: center;
+      justify-content: center;
+  
+    }
+    .fileType{
+      font-style: normal;
+      font-size: 18px;
+      font-weight: 400;
+      color: #000;
+      margin:8px;
+    }
+    .imgDiv{
+      width:24px;
+  height: 24px;
+  margin-left:12px;
+    }
+    .saveButtonDiv{
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+    }
+    .saveButton{
+      margin-top: 32px;
+      width: 300px;
+      cursor: pointer;
+      height: 56px;
+      display: flex;
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px;
+      border-radius: 5px;
+      background-color: #a582ee;
+      align-items: center;
+      justify-content: center;
+  
+    }
+    .closeDiv{
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+    .closebuttonDiv{
+      font-size: 28px;
+      background: #fff;
+      border: none;
+      font-weight: 500;
+      width: 32px;
+      cursor: pointer;
+      height: 32px;
+      margin-bottom: 12px;
+    }
+    .addButtonDiv{
+    
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      
+    }
