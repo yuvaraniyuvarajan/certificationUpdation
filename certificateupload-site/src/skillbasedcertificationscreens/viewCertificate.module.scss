@@ -24,7 +24,7 @@
 }
 .detailBox{
   display: flex;
-  width: 800px;
+  max-width: 800px;
   border: 1px solid rgba(23,21,21,.02);
   background: rgba(23,21,21,.02);
   align-items: center;
@@ -32,23 +32,38 @@
   flex-direction: column;
   padding:24px;
 }
+.detailDiv{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+}
 .nameDiv{
   display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: flex-start;
-align-items: center;
+  flex-direction: row;
+  @include breakpoint-down('md'){
+    flex-direction: column;
+  }
 }
 .name{
   font-size: 24px;
   font-weight: 700;
   color: black;
+  @include breakpoint-down('md'){
+    font-size: 20px;
+  }
 }
 .issuer{
   font-size :20px;
   font-weight: 400;
   color: gray;
   margin-left: 24px;
+  @include breakpoint-down('md'){
+    font-size: 20px;
+    margin-left: 0px;
+  }
 }
 .number
 {
@@ -63,6 +78,12 @@ align-items: center;
   align-items: center;
   margin-right: 8px;
   justify-content: center;
+  @include breakpoint-down('md'){
+    font-size: 16px;
+    width :20px;
+    height: 20px;
+
+  }
 }
 .link{
   font-size: 12px;
@@ -73,4 +94,7 @@ align-items: center;
   width: 100%;
   cursor: pointer;
   justify-content: flex-start;
+  @include breakpoint-down('md'){
+    margin: 8px 0px 0px 56px ;
+  }
 }

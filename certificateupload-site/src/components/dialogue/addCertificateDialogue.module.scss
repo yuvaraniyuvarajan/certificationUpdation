@@ -9,11 +9,18 @@
     padding:24px 32px 24px;
     align-items: center;
     justify-content: center;
+    @include breakpoint-down('md'){
+      padding: 16px 24px 16px;
+    }
   }
+
   .certiRowDiv
   {
     display: flex;
-  
+    @include breakpoint-down('md'){
+    flex-direction: column;
+    grid-gap: 12px;
+    }
   }
   .uploadDiv{
   
@@ -30,7 +37,11 @@
       font-size: 16px;
       font-weight: 400;
       color: #000;
-      margin:16px
+      margin:16px;
+      @include breakpoint-down('md'){
+        margin: 8px;
+        font-size: 14px;
+      }
   
     }
     .buttonDiv{
@@ -48,7 +59,13 @@
       background-color: #a582ee;
       align-items: center;
       justify-content: center;
-  
+      @include breakpoint-down('md'){
+        font-size: 14px;
+        width: 100px;
+        height: 30px;
+        border-radius: 10px;
+        margin: 8px;
+      }
     }
     .fileType{
       font-style: normal;
@@ -56,11 +73,21 @@
       font-weight: 400;
       color: #000;
       margin:8px;
+      @include breakpoint-down('md'){
+      font-size: 16px;
+      }
     }
     .imgDiv{
       width:24px;
   height: 24px;
   margin-left:12px;
+  border-radius: 10px;
+  @include breakpoint-down('md')
+  {
+    width:20px;
+    height: 20px;
+    margin-left: 8px;
+  }
     }
     .saveButtonDiv{
       display: flex;
@@ -80,6 +107,12 @@
       background-color: #a582ee;
       align-items: center;
       justify-content: center;
+      @include breakpoint-down('md'){
+        font-size: 16px;
+        width: 200px;
+        height: 36px;
+        margin-top: 24px;
+      }
   
     }
     .closeDiv{
