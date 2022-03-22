@@ -43,8 +43,10 @@
 .nameDiv{
   display: flex;
   flex-direction: row;
+  align-items: center;
   @include breakpoint-down('md'){
     flex-direction: column;
+
   }
 }
 .name{
@@ -56,8 +58,8 @@
   }
 }
 .issuer{
-  font-size :20px;
-  font-weight: 400;
+  font-size :24px;
+  font-weight:400;
   color: gray;
   margin-left: 24px;
   @include breakpoint-down('md'){
@@ -96,5 +98,32 @@
   justify-content: flex-start;
   @include breakpoint-down('md'){
     margin: 8px 0px 0px 56px ;
+  }
+}
+
+.addButtonDiv{
+    
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+}.saveButton{
+  margin-top: 32px;
+  width: 300px;
+  cursor: pointer;
+  height: 56px;
+  display: flex;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: #a582ee;
+  align-items: center;
+  justify-content: center;
+  @include breakpoint-down('md'){
+    font-size: 16px;
+    width: 200px;
+    height: 36px;
+    margin-top: 24px;
   }
 }

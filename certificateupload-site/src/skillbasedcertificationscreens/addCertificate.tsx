@@ -1,12 +1,9 @@
 
-import { useNavigation } from '@react-navigation/native';
 import { useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-
 import { useNavigate } from 'react-router';
 import AddCertificateDialogue from '../components/dialogue/addCertificateDialogue';
 import { certificateInformationState } from '../redux/interface/interface';
-import { RouterLocationState } from '../redux/interface/RouterLocationState';
 import style from './addCertificate.module.scss'
 
 
