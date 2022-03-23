@@ -1,8 +1,10 @@
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useCertificateInformationDetail } from '../redux/slice/certificatedetail';
 import style from './viewCertificate.module.scss'
 export const ViewCertificate: React.FC = () => {
     const certiData = useCertificateInformationDetail();
+    const location: any = useLocation();
+    const file = location.state.file
     const history = useNavigate();
     const onOpen = () => {
         history('/');
@@ -15,12 +17,14 @@ export const ViewCertificate: React.FC = () => {
                 <div className={style.noteLabel}>(You can add upto 5 certificates)</div>
                 {certiData.certificatename !== '' && certiData.issuer !== '' ? (
                     <div className={style.detailBox}>
-                        <div className={style.nameDiv}>
+                        <div className={style.detailDiv}>
                             <div className={style.number}>1</div>
-                            <label className={style.name}>{certiData?.certificatename}</label>
-                            <label className={style.issuer}>{certiData?.issuer}</label>
+                            <div className={style.nameDiv}>
+                                <label className={style.name}>{certiData?.certificatename}</label>
+                                <label className={style.issuer}>{certiData?.issuer}</label>
+                            </div>
                         </div>
-                        <a href='' className={style.link}>View certification</a>
+                        <a href={file} className={style.link}>View certification</a>
                     </div>) : (
                     <div className={style.addButtonDiv}>
                         <button className={style.saveButton} onClick={onOpen}>ADD CERTIFICATION </button>
